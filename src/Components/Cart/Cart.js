@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import Coupon from './Coupon';
+import React, { Component } from "react";
+import Coupon from "./Coupon";
 
- export class Cart extends Component {
+export class Cart extends Component {
   state = {
     items: [],
     total: 0,
@@ -26,7 +26,9 @@ import Coupon from './Coupon';
           <tbody>
             {this.state.items.map((item, index) => (
               <tr key={index}>
-                <td><img src={item.image} alt={item.product} /></td>
+                <td>
+                  <img src={item.image} alt={item.product} />
+                </td>
                 <td>{item.product}</td>
                 <td>{item.price}</td>
                 <td>
@@ -37,23 +39,25 @@ import Coupon from './Coupon';
                   />
                 </td>
                 <td>{item.price * item.quantity}</td>
-                <td><button onClick={() => this.removeItem(index)}>Remove</button></td>
+                <td>
+                  <button onClick={() => this.removeItem(index)}>Remove</button>
+                </td>
               </tr>
             ))}
           </tbody>
         </table>
-               <div>
+        <div>
           <p>SubTotal: {this.state.total}</p>
           <p>Total: {this.state.total}</p>
-          </div>
-          <div>
+        </div>
+        <div>
           <button onClick={this.updateCart}>Update Cart</button>
           <button onClick={this.continueShopping}>Continue Shopping</button>
         </div>
         <button>PROCEED TO CHECKOUT</button>
 
         <div>
-        <Coupon />
+          <Coupon />
         </div>
       </div>
     );
