@@ -16,10 +16,13 @@ const Login = () => {
         justifyContent: "center",
       }}
     >
-      <Container className="p-4 rounded bg-custom" style={{ maxWidth: '800px' }}>
+      <Container
+        className="p-4 rounded bg-custom"
+        style={{ maxWidth: "800px" }}
+      >
         <Row className="justify-content-center">
           <Col md={6}>
-            <h1 className="text-center mb-4">Login In </h1>
+            <h1 className="text-center mb-4">Log In </h1>
             <Form className="bg-transparent">
               <Form.Group controlId="formBasicEmail" className="mb-4">
                 <Form.Label style={{ fontWeight: "bold" }}>Username</Form.Label>
@@ -32,7 +35,7 @@ const Login = () => {
               </Form.Group>
 
               <Button variant="primary" type="submit" block>
-                Submit
+                Login{" "}
               </Button>
             </Form>
             <p className="text-center mt-3">
