@@ -1,9 +1,13 @@
-import React from "react";
+import {useState}from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 import backgroundImage from "../Assets/bg1.jpg";
 import "../Signup/Signup.css";
 
+
 const Signup = () => {
+
+
   return (
     <div
       style={{
@@ -42,7 +46,7 @@ const Signup = () => {
               </Form.Group>
 
               <Button variant="primary" type="submit" block>
-                Submit
+                Sign Up
               </Button>
             </Form>
           </Col>
