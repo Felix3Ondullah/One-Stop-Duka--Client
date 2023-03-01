@@ -16,7 +16,7 @@ const Signup = () => {
         justifyContent: "center",
       }}
     >
-      <Container className="p-4 rounded bg-custom">
+      <Container className="p-4 rounded bg-custom" style={{ maxWidth: '800px' }}>
         <Row className="justify-content-center">
           <Col md={6}>
             <h1 className="text-center mb-4">Sign Up</h1>
