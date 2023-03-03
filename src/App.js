@@ -7,7 +7,7 @@ import Categories from "./Components/Categories/Categories";
 import Footer from "./Components/Footer/Footer";
 import Home from "./Components/Home/Home";
 import Signup from "./Components/Signup/Signup";
-import Navbar from "./Components/Navabar/Navbar";
+import Navbar from "./Components/Navbar/Navbar";
 import Login from "./Components/Login/Login";
 
 function App() {
