@@ -1,10 +1,11 @@
 import './App.css';
-import { Cart } from './Components/Cart/Cart';
-
+import Cart from './Components/Cart/Cart';
+import { CartProvider } from "react-use-cart";
 function App() {
   return (
     <div >
-      <Cart />       
+      <Cart /> 
+      <CartProvider />      
     </div>
   );
 }
