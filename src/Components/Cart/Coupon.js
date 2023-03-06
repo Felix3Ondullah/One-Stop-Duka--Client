@@ -13,7 +13,7 @@ class Coupon extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{backgroundcolor:'red'}}>
         <p>Coupon</p>
         <label>
           Enter your coupon code if you have one
@@ -21,7 +21,7 @@ class Coupon extends Component {
           <div>
           <label>
           <input type="text"  placeholder='Coupon Code' value={this.state.couponCode} onChange={this.handleCouponChange} />
-          <button>Apply Coupon</button>
+          <button style={{backgroundColor:'red'}}>Apply Coupon</button>
         </label>
         </div>
       </div>

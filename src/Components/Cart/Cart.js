@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { Container } from 'react-bootstrap';
+import "./Cart.css"
+import Coupon from './Coupon';
 
 const Cart = () => {
   const [cartItems, setCartItems] = useState([
@@ -59,7 +62,7 @@ const Cart = () => {
 
   return (
     <div>
-      <table>
+      <table style={{backgroundColor:'white', padding:'10px', width:'100%', border:' 1px solid black',textAlign:'center',   bordercollapse:'collapse'}}>
         <thead>
           <tr>
           <th>Image</th>
@@ -94,18 +97,37 @@ const Cart = () => {
           ))}
         </tbody>
       </table>
-      <div>
-        <input type="text" placeholder="Enter coupon code" value={coupon} onChange={(e) => setCoupon(e.target.value)} />
-        <button onClick={applyCoupon}>Apply Coupon</button>
+      <div style={{position:'absolute', bottom:150, left: 60}}>
+        <p>Coupon </p>
+        <p>Enter your coupon code if you have one.</p>
+        <input type="text" placeholder="Coupon code" value={coupon} onChange={(e) => setCoupon(e.target.value)} />
+        <button style={{backgroundColor:'black', color:'white', font: 18}} onClick={applyCoupon}>Apply Coupon</button>
       </div>
-      <div>
-        <span>Subtotal: ${subtotal}</span>
+      <div style={{position:'absolute', bottom: 375, right: 30}}>
+      <p>CART TOTALS</p>
+        <span >Subtotal: ${subtotal}</span>
         <span>Total: ${total}</span>
       </div>
+      <div style={{height:'150px', padding:'25px', position:'absolute', left: 0, fontSize: 16,}}>
       <div>
-        <button onClick={calculateTotal}>Update Cart</button>
-        <button>Continue Shopping</button>
-        <button onClick={handleCheckout}>Proceed to Checkout</button>
+    <button style={{backgroundColor:'black', color:'white', position:'relative',left:30,bottom: -30, fontSize: 16, padding: '10px 12px',lineHeight: 0.5,
+  border: '1px solid', textTransform: 'none', textAlign: 'center'}} onClick={calculateTotal}>
+      Update Cart
+      </button>
+    
+</div>
+      <div>
+      <button style={{position:'relative', left:180, padding: '10px 12px',
+  border: '1px solid', fontSize: 16, lineHeight: 0.5,  textTransform: 'none', textAlign: 'center'}} >
+        Continue Shopping
+        </button>
+        </div>
+        <div>
+        <button style={{backgroundColor:'black', color:'white', position: 'absolute', bottom: 50, right: -1600, fontSize: 16,
+      }} onClick={handleCheckout}>
+        Proceed to Checkout
+        </button>
+        </div>
       </div>
     </div>
   );
